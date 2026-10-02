@@ -1,0 +1,3 @@
+User-provided Quaternius models included: Pirate Captain, Skeleton.
+Please retain the license/attribution metadata that accompanied your downloads.
+Quaternius currently publishes its asset license at https://quaternius.com/license.html.
