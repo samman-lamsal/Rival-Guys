@@ -1,0 +1,13 @@
+{
+  "name":"MASARP STUDIO",
+  "short_name":"MASARP",
+  "description":"Independent game studio by Samman Lamsal.",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#07111b",
+  "theme_color":"#07111b",
+  "icons":[
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#65d5ff" />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://masarpstudio.com/rival-guys.html" />
+  <meta name="description" content="Rival Guys is a fast-paced 3D arena brawler with 2v2, 4v4 and 8v8 battles, random arenas, fighters, emotes, upgrades and tournament-style finals." />
+  <meta name="application-name" content="Rival Guys" />
+  <meta name="apple-mobile-web-app-title" content="Rival Guys" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rival Guys" />
+  <meta property="og:description" content="Fight, dodge, dash and knock rivals off colorful floating arenas." />
+  <meta property="og:image" content="https://masarpstudio.com/site-assets/rival-guys-landscape.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rival Guys" />
+  <meta name="twitter:description" content="Fast-paced 3D arena battles by MASARP STUDIO." />
+  <meta name="twitter:image" content="https://masarpstudio.com/site-assets/rival-guys-landscape.png" />
+  <title>Play Rival Guys | MASARP STUDIO</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon-48.png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Play Rival Guys","url":"https://masarpstudio.com/play-rival-guys.html","isPartOf":{"@id":"https://masarpstudio.com/#website"},"about":{"@type":"VideoGame","name":"Rival Guys","url":"https://masarpstudio.com/rival-guys.html"}}</script>
+</head>
+<body>
+  <div id="game"></div>
+  <div id="boot">
+    <div class="studio-loader-mark" aria-hidden="true"><i></i><b>M</b><i></i></div>
+    <div class="studio-made">MADE BY</div>
+    <div class="studio-name">MASARP <b>STUDIO</b></div>
+    <div class="studio-loader"><i></i></div>
+    <span>Preparing the arena…</span>
+  </div>
+
+  <div id="ui-root">
+    <section id="home-ui" class="hidden screen">
+      <div class="brand"><span>RIVAL</span><b>GUYS</b></div>
+      <div class="topbar">
+        <div class="currency coin"><span>●</span><b data-coins>0</b><i>+</i></div>
+        <div class="currency gem"><span>◆</span><b data-gems>0</b><i>+</i></div>
+        <div id="level-badge" class="level-badge">LV 1</div>
+      </div>
+      <div class="profile-card"><div class="profile-face">🙂</div><div><b>PLAYER</b><small id="skin-name">Captain</small></div><div class="xp"><i id="xp-fill"></i><span id="xp-label">0/250 XP</span></div></div>
+      <div class="left-actions"><button id="missions-btn" class="home-small blue-btn"><span>✓</span><b>MISSIONS</b></button><button id="upgrade-btn" class="home-small blue-btn"><span>🥊</span><b>FIGHTERS</b></button><button id="emotes-btn" class="home-small blue-btn"><span>😎</span><b>EMOTES</b></button></div>
+      <button id="wheel-btn" class="wheel-btn"><span>★</span><b>LUCKY<br>WHEEL</b></button>
+      <div class="right-rail"><button id="quests-btn" class="rail-card"><span>📋</span><b>QUESTS</b><small>Rewards ready</small></button><button id="maps-btn" class="rail-card"><span>🗺</span><b>MAPS</b><small>6 arenas</small></button></div>
+      <button id="play-btn" class="play-btn"><span>PLAY</span><small id="home-mode-label">4 VS 4 TEAM BATTLE</small></button>
+    </section>
+
+    <section id="battle-select" class="hidden screen battle-select-screen">
+      <div class="battle-select-top"><button id="select-back" class="select-back">‹</button><div><small>BATTLE QUEUE</small><b>SELECT MODE</b></div><div class="selected-mode-pill" id="selected-mode-pill">4V4</div></div>
+      <div class="mode-panel pro-panel">
+        <div class="panel-kicker">TEAM SIZE</div>
+        <div id="mode-cards" class="mode-cards"></div>
+        <div class="panel-kicker fighter-kicker">YOUR FIGHTER</div>
+        <div id="select-skins" class="select-skins"></div>
+      </div>
+      <div class="versus-panel pro-panel">
+        <div class="team-column blue-team"><div class="team-title"><span>BLUE</span><b>YOUR TEAM</b></div><div id="blue-slots" class="team-slots"></div></div>
+        <div class="vs-mark"><small>FIRST TO</small><b>3</b><span>VS</span></div>
+        <div class="team-column red-team"><div class="team-title"><span>RED</span><b>RIVALS</b></div><div id="red-slots" class="team-slots"></div></div>
+      </div>
+      <div class="select-character-hint">YOUR FIGHTER IS LIVE IN 3D • TAP IT TO EMOTE</div>
+      <button id="find-match-btn" class="find-match-btn"><span>FIND MATCH</span><small id="find-match-sub">4 VS 4 • BEST OF 5</small></button>
+    </section>
+
+    <section id="lobby-ui" class="hidden screen lobby-screen">
+      <div class="lobby-card glass">
+        <div class="slot-label">NEXT ARENA</div><div id="lobby-map-final" class="slot-machine">?</div>
+        <div class="lobby-head"><b id="lobby-mode-title">4 VS 4 LOBBY</b><span id="lobby-count">1/8</span></div>
+        <div class="lobby-team-legend"><span class="legend-blue">BLUE TEAM</span><b>VS</b><span class="legend-red">RED TEAM</span></div>
+        <div id="lobby-players" class="lobby-players"></div><div id="lobby-status" class="lobby-status">FINDING PLAYERS…</div>
+      </div>
+    </section>
+
+    <section id="arena-transition" class="hidden screen arena-transition-screen">
+      <div class="arena-transition-card glass">
+        <div id="arena-transition-kicker" class="arena-transition-kicker">RANDOM ARENA</div>
+        <div id="arena-transition-round" class="arena-transition-round">ROUND 1 / 5</div>
+        <div class="arena-roulette-window">
+          <div id="arena-roulette-name" class="arena-roulette-name">SELECTING…</div>
+          <div id="arena-roulette-cards" class="arena-roulette-cards"></div>
+        </div>
+        <div id="arena-transition-status" class="arena-transition-status">ROLLING ARENAS…</div>
+        <div class="arena-load-track"><i id="arena-load-fill"></i></div>
+        <div class="arena-transition-tip">NEW ARENA EVERY ROUND • NO REPEATS UNTIL THE ROTATION IS USED</div>
+      </div>
+    </section>
+
+    <section id="hud" class="hidden screen hud-screen">
+      <div class="hud-top">
+        <div class="hud-chip team-hud blue"><small id="hud-map">SKY DISC</small><b id="hud-blue">BLUE 4</b><div id="blue-win-pips" class="win-pips blue-pips"></div></div>
+        <div class="timer-stack"><div class="round-label" id="hud-round">ROUND 1/5</div><div class="timer" id="hud-time">1:30</div></div>
+        <div class="hud-chip right team-hud red"><small id="hud-mode">4V4</small><b id="hud-red">RED 4</b><div id="red-win-pips" class="win-pips red-pips"></div></div>
+      </div>
+      <div id="kill-feed" class="kill-feed"></div><div id="event-banner" class="event-banner hidden"></div><div id="round-banner" class="round-banner hidden"></div><div id="countdown" class="countdown hidden"></div><div id="spectate" class="spectate hidden">ELIMINATED — SPECTATING TEAMMATE</div>
+      <div id="mobile-controls" class="mobile-controls"><div id="stick" class="stick"><div id="stick-knob" class="stick-knob"></div></div><div class="action-cluster"><button id="btn-emote" class="action emote" aria-label="Emote">😎</button><button id="btn-dash" class="action dash">DASH</button><button id="btn-punch" class="action punch" aria-label="Attack">⚔️</button><button id="btn-jump" class="action jump">⬆</button></div></div>
+      <div class="desktop-help">WASD / ARROWS · SPACE JUMP · E ATTACK · K DASH · 1–4 EMOTES</div>
+    </section>
+
+    <section id="results-ui" class="hidden screen results-screen">
+      <div class="result-confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="result-banner">
+        <div id="result-title">VICTORY!</div>
+        <h2 id="result-champion">BLUE TEAM VICTORY</h2>
+        <div class="result-emote-note">WINNERS CELEBRATE WITH EQUIPPED EMOTES</div>
+      </div>
+      <div class="result-score-panel glass">
+        <div class="result-meta"><span>KOs <b id="result-kos">0</b></span><span>MODE <b id="result-mode">4V4</b></span><span>LEVEL <b data-level>1</b></span></div>
+        <div id="result-rounds" class="scoreboard"></div>
+      </div>
+      <div class="result-bottom-card glass">
+        <div class="reward-title">MATCH REWARDS</div>
+        <div class="rewards"><div>🪙<b id="reward-coins">+0</b></div><div>XP<b id="reward-xp">+0</b></div><div>◆<b id="reward-gems">+0</b></div></div>
+        <div class="result-actions"><button id="result-home" class="big-action blue">HOME</button><button id="result-ad-coins" class="big-action reward-ad hidden">WATCH AD • DOUBLE COINS</button><button id="result-replay" class="big-action red">PLAY AGAIN</button></div>
+      </div>
+    </section>
+
+    <section id="modal" class="hidden modal-wrap"><div class="modal-panel glass"><div class="modal-head"><h2 id="modal-title">PANEL</h2><button id="modal-close">✕</button></div><div id="modal-body" class="modal-body"></div></div></section>
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="js/ads-config.js"></script>
+  <script src="js/ads.js"></script>
+  <script src="js/vendor/three.r128.min.js"></script>
+  <script src="js/vendor/GLTFLoader.js"></script>
+  <script src="js/config.js"></script><script src="js/embedded_models.js"></script><script src="js/embedded_props.js"></script><script src="js/save.js"></script><script src="js/audio.js"></script><script src="js/models.js"></script><script src="js/player.js"></script><script src="js/bots.js"></script><script src="js/combat.js"></script><script src="js/arena.js"></script><script src="js/meta.js"></script><script src="js/ui.js"></script><script src="js/match.js"></script>
+</body>
+</html>

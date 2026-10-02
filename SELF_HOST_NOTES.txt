@@ -1,0 +1,9 @@
+RIVAL GUYS SELF-HOST BUILD V1.31
+
+- CrazyGames SDK removed / not included.
+- CrazyGames Data Module removed / not included.
+- Saves are localStorage-based.
+- Favicon + app icons + PWA manifest included.
+- SEO / Open Graph / VideoGame structured metadata included.
+- Google H5 Games Ads hooks included but disabled until your AdSense publisher ID is configured.
+- Background music and all existing gameplay/assets retained.
